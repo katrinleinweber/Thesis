@@ -1,0 +1,3 @@
+http://www.itc.nl/isprswgIII-3/filtertest/
+https://sourceforge.net/projects/pointclouds/files/PCD%20datasets/
+http://www.ahn.nl/index.html
