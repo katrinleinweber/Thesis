@@ -1,3 +1,6 @@
 http://www.itc.nl/isprswgIII-3/filtertest/
 https://sourceforge.net/projects/pointclouds/files/PCD%20datasets/
 http://www.ahn.nl/index.html
+
+Programs:
+https://sourceforge.net/p/slam6d/code/HEAD/tree/trunk/ (has function to scale down point clouds)
