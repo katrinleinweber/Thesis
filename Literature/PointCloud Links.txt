@@ -4,3 +4,4 @@ http://www.ahn.nl/index.html
 
 Programs:
 https://sourceforge.net/p/slam6d/code/HEAD/tree/trunk/ (has function to scale down point clouds)
+https://github.com/makokal/3dtk-css/blob/master/src/slam6d/scan_red.cc (for the different reduction functions)
