@@ -10,7 +10,7 @@
 \usepackage{xifthen}
 \usepackage{algorithm2e}
 \usepackage{lipsum}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -19,7 +19,7 @@
 %----------------------------------------------------------------------------------------
 %	HEADER & FOOTER
 %----------------------------------------------------------------------------------------
-\pagestyle{fancy}
+\pagestyle{empty}
   \lhead{\includegraphics[width=4.5cm]{logoUU}}		%Zorg dat het logo in dezelfde map staat
   \rhead{\footnotesize \textsc {\\ \opdracht}}
   \lfoot
@@ -39,7 +39,23 @@
   \fancyhf{}
    \renewcommand{\headrulewidth}{0pt}
    \chead{\includegraphics[width=5.5cm]{logoUU}}
-   \rfoot{\small \textsc {Page \thepage\ of \pageref{LastPage}}}
+   \rfoot{\small}
+ }
+
+\fancypagestyle{secondstyle}
+ {
+  \fancyhf{}
+   \lhead{\includegraphics[width=4.5cm]{logoUU}}
+   \rhead{\footnotesize \textsc {\\ \opdracht}}
+   \lfoot
+    {
+	\footnotesize \studentA
+	\ifthenelse{\isundefined{\studentB}}{}{\\ \studentB}
+	\ifthenelse{\isundefined{\studentC}}{}{\\ \studentC}
+	\ifthenelse{\isundefined{\studentD}}{}{\\ \studentD}
+	\ifthenelse{\isundefined{\studentE}}{}{\\ \studentE}
+    }
+   \rfoot{\small}
  }
 
 \setlength{\topmargin}{-0.3in}
@@ -89,16 +105,20 @@
 %	INHOUDSOPGAVE EN ABSTRACT 
 %----------------------------------------------------------------------------------------
 \newpage
+\thispagestyle{secondstyle}
 \tableofcontents
 \newpage
+\thispagestyle{secondstyle}
 \begin{abstract}
 %\lorem[13]
 \end{abstract}
 \newpage
+
+\pagestyle{fancy}
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
-
+\setcounter{page}{1}
 \section{Introduction}
 
 %\begin{itemize}
@@ -142,7 +162,13 @@ Our contributions are: (finalized at the end for now a sort of goal for this the
 %----------------------------------------------------------------------------------------
 
 \section{Related Work}
+(maybe needs more text as an introduction to the related work)
 
+For our solution we need research from two different (fields): Research on fluid simulations and research on point clouds.
+
+For the fluid simulation part we will be looking at what methods are available and which are applicable in our scope, meaning that they have to be able to handle large volumes and have the ability to be run in real-time. 
+
+As for the second part, the point cloud part, we look at methods to scale down the amount of point and methods for fast collision detection, which both contribute to a real-time simulation.
 %Literature review of state of the art papers
 
 % Papers:
@@ -151,15 +177,25 @@ Our contributions are: (finalized at the end for now a sort of goal for this the
 %		- who provide background
 
 \subsection{Fluid Simulation}
+When it comes to fluids in simulations there are two main approaches: Eulerian and Lagrangian. (continue explanation)
 
-\subsubsection{}
+\subsubsection{Particle Based}
+(better explanation than above)
+(Some recent methods (SPH etc))
+(something about why or why not for our goals (so based on runtime))
 
-\subsubsection{}
+\subsubsection{Grid Based}
+(better explanation than above)
+(Some recent methods (MAC grid etc))
+(something about why or why not for our goals (so based on runtime))
 
 \subsection{Point Clouds}
+(maybe small introduction on point clouds)
 
 \subsubsection{Collision Detection}
-
+(Explain collision detection)
+(Recent methods)
+(explain what we can use from it)
 
 \subsubsection{Scalability}
  (first explain the different types of scaling down the amount of particles, including papers which do it/explain the method)

@@ -4,8 +4,8 @@
 \BOOKMARK [2][-]{subsection.1.3}{Contributions}{section.1}% 4
 \BOOKMARK [1][-]{section.2}{Related Work}{}% 5
 \BOOKMARK [2][-]{subsection.2.1}{Fluid Simulation}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.1.1}{}{subsection.2.1}% 7
-\BOOKMARK [3][-]{subsubsection.2.1.2}{}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Particle Based}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Grid Based}{subsection.2.1}% 8
 \BOOKMARK [2][-]{subsection.2.2}{Point Clouds}{section.2}% 9
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Collision Detection}{subsection.2.2}% 10
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Scalability}{subsection.2.2}% 11
