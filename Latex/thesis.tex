@@ -190,12 +190,14 @@ When it comes to fluids in simulations there are two main approaches: Eulerian a
 (something about why or why not for our goals (so based on runtime))
 
 \subsection{Point Clouds}
-(maybe small introduction on point clouds)
+(maybe more explaining on how obtained point clouds)
 
-\subsubsection{Collision Detection}
-(Explain collision detection)
-(Recent methods)
-(explain what we can use from it)
+As said before, point clouds are becoming more and more available. This is largely due to the developments in scanners and computers. Scanners are being more for less money, while they increase in precision and decrease in size. The size decrease allows them to be mounted on vehicles such as: airplanes, helicopters, and even vans. And the increased precision allows for more accurate and more meaningful simulations and other appliances, such as digitizing objects and buildings. 
+
+But increased precision comes at the cost of increased amounts of data which are difficult to deal with. When it comes to handling huge amount of points there are two main methods: Scaling down the amount of points through sampling or use data structures such as kD-trees and Octrees \cite{elseberg2013one}. 
+
+However both methods are not perfect. For example when we sample the point cloud we get decreased accuracy which makes it impossible to run accurate simulations on the data, and when we use trees our computation time for (handelingen) goes up, which makes it hard to achieve an interactive application.  Do note that using a tree does decrease the time needed to interact with the point cloud, but thanks to the cheer amount of points and in relation nodes in the tree, it still takes to long for interactive usage. That's why in most cases a combination of the two gets used, with on each level of a tree a sampled representation of the point cloud. This makes it possible to stop when we are spending too much time on one pass through the tree and also return an usable result \cite{klein2004point}.
+ 
 
 \subsubsection{Scalability}
  (first explain the different types of scaling down the amount of particles, including papers which do it/explain the method)
@@ -204,6 +206,17 @@ When it comes to fluids in simulations there are two main approaches: Eulerian a
 \item Range
 \item Interpolation
 \end{itemize}
+
+\cite{klein2004point}
+
+\cite{elseberg2013one}
+
+\subsubsection{Collision Detection}
+(Explain collision detection)
+(Recent methods)
+(explain what we can use from it)
+
+
 
 (maybe explain something about parallelism and point clouds)
 
