@@ -190,7 +190,7 @@ When it comes to fluids in simulations there are two main approaches: Eulerian a
 (something about why or why not for our goals (so based on runtime))
 
 \subsection{Point Clouds}
-(maybe more explaining on how obtained point clouds)
+%(maybe more explaining on how obtained point clouds)
 
 As said before, point clouds are becoming more and more available. This is largely due to the developments in scanners and computers. Scanners are being more for less money, while they increase in precision and decrease in size. The size decrease allows them to be mounted on vehicles such as: airplanes, helicopters, and even vans. And the increased precision allows for more accurate and more meaningful simulations and other appliances, such as digitizing objects and buildings. 
 
@@ -205,18 +205,19 @@ In the following sections we will go more into detail on which methods are avail
 
 As previously discussed there are two distinct ways to deal with massive amounts of data: Sampling and the use of data structures such as trees.
 
-When it comes to sampling there are many different methods which can be used, but not all of them are applicable to point clouds. In Lee et al\cite{lee2001data}  some of these methods get explained and tested against each other.
+When it comes to sampling there are many different methods which can be used, but not all of them are applicable to point clouds. In Lee et al\cite{lee2001data}  two of these methods get explained and tested against some other methods.
 \begin{itemize}
-\item Uniform grids: 
-\item Non-uniform grids:
+\item Uniform grids: After creating a 2D uniform grid spanning the point cloud they pick the median point to represent all points in the grid square.
+\item Non-uniform grids: Same principle as with the uniform grid but now they take into account the amount of points, in order to prevent the loss of corners and other details.
 \item Uniform sampling (hinted at in paper)
 \item Chordal deviation sampling (hinted at in paper)
 \end{itemize}
+For a more detailed explanation and test restults we refer to Lee et al \cite{lee2001data}.
 
-\cite{klein2004point}
+Klein et al \cite{klein2004point} proposes a method which combines multilevel sampling with an octree. On each layer of the octree we have a few point and a circle representing the original surface/point cloud. So the lower we get in the octree the more precise the representation will be. This layered system allows them to stop at any moment and generate an usable result. This is very useful when we are trying to create an interactive application, since we can stop we have spend too much time collision checking.
 
 
-Combining the above methods with the knowledge that we will need a tree for both the collision detection of the simulation and for scaling down the points even more, it is smart to combine these two to save on precomputing times.The smart choice will than be the method proposed by \cite{klein2004point}. Another benefit this method adds is the possibility to stop anywhere in the tree and still return a result, which is beneficial for a interactive application.
+Combining the above methods with the knowledge that we will need a tree for both the collision detection of the simulation and for scaling down the points even more, it is smart to combine these two to save on precomputing times.The smart choice will than be the method proposed by Klein et al \cite{klein2004point}. Another benefit this method adds is the possibility to stop anywhere in the tree and still return a result, which is beneficial for a interactive application.
 
 
 (Octrees)
@@ -225,6 +226,8 @@ Combining the above methods with the knowledge that we will need a tree for both
 \cite{elseberg2011efficient}
 
 \cite{elseberg2013one}
+
+\cite{schnabel2006octree}
 
 (different methods)
 

@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Grid Based}{2}{subsubsection.2.1.2}
 \contentsline {subsection}{\numberline {2.2}Point Clouds}{2}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Scalability}{3}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Collision Detection}{3}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2}Collision Detection}{4}{subsubsection.2.2.2}
 \contentsline {section}{\numberline {3}Background}{4}{section.3}
 \contentsline {section}{\numberline {4}Methology}{4}{section.4}
 \contentsline {section}{\numberline {5}Results}{4}{section.5}
