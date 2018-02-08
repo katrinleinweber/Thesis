@@ -197,19 +197,38 @@ As said before, point clouds are becoming more and more available. This is large
 But increased precision comes at the cost of increased amounts of data which are difficult to deal with. When it comes to handling huge amount of points there are two main methods: Scaling down the amount of points through sampling or use data structures such as kD-trees and Octrees \cite{elseberg2013one}. 
 
 However both methods are not perfect. For example when we sample the point cloud we get decreased accuracy which makes it impossible to run accurate simulations on the data, and when we use trees our computation time for (handelingen) goes up, which makes it hard to achieve an interactive application.  Do note that using a tree does decrease the time needed to interact with the point cloud, but thanks to the cheer amount of points and in relation nodes in the tree, it still takes to long for interactive usage. That's why in most cases a combination of the two gets used, with on each level of a tree a sampled representation of the point cloud. This makes it possible to stop when we are spending too much time on one pass through the tree and also return an usable result \cite{klein2004point}.
+
+In the following sections we will go more into detail on which methods are available and which are of use to us.
  
 
 \subsubsection{Scalability}
- (first explain the different types of scaling down the amount of particles, including papers which do it/explain the method)
+
+As previously discussed there are two distinct ways to deal with massive amounts of data: Sampling and the use of data structures such as trees.
+
+When it comes to sampling there are many different methods which can be used, but not all of them are applicable to point clouds. In Lee et al\cite{lee2001data}  some of these methods get explained and tested against each other.
 \begin{itemize}
-\item Octree
-\item Range
-\item Interpolation
+\item Uniform grids: 
+\item Non-uniform grids:
+\item Uniform sampling (hinted at in paper)
+\item Chordal deviation sampling (hinted at in paper)
 \end{itemize}
 
 \cite{klein2004point}
 
+
+Combining the above methods with the knowledge that we will need a tree for both the collision detection of the simulation and for scaling down the points even more, it is smart to combine these two to save on precomputing times.The smart choice will than be the method proposed by \cite{klein2004point}. Another benefit this method adds is the possibility to stop anywhere in the tree and still return a result, which is beneficial for a interactive application.
+
+
+(Octrees)
+
+
+\cite{elseberg2011efficient}
+
 \cite{elseberg2013one}
+
+(different methods)
+
+\cite{eckart2016accelerated}
 
 \subsubsection{Collision Detection}
 (Explain collision detection)

@@ -8,8 +8,8 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Particle Based}{2}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Grid Based}{2}{subsubsection.2.1.2}
 \contentsline {subsection}{\numberline {2.2}Point Clouds}{2}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Collision Detection}{3}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Scalability}{3}{subsubsection.2.2.2}
-\contentsline {section}{\numberline {3}Background}{3}{section.3}
-\contentsline {section}{\numberline {4}Methology}{3}{section.4}
-\contentsline {section}{\numberline {5}Results}{3}{section.5}
+\contentsline {subsubsection}{\numberline {2.2.1}Scalability}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Collision Detection}{3}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {3}Background}{4}{section.3}
+\contentsline {section}{\numberline {4}Methology}{4}{section.4}
+\contentsline {section}{\numberline {5}Results}{4}{section.5}
